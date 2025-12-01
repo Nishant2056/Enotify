@@ -92,6 +92,9 @@ h2{
     border: 1px solid #E6E7E8;
     border-radius:6px;
 }
+.logout-btn:focus{
+    border: 1px solid #E6E7E8;
+}
 .site-header .nav-menu-container{
     padding:8px 24px;
     font-size:16px;
