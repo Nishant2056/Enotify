@@ -472,12 +472,14 @@ button.upload-btn{
 .remark textarea{
     padding:10px 14px;
     resize: none;
+    font-size: 14px;
 }
 .maker-bottom-wrapper{
     margin-top:16px;
 }
 .maker-bottom-wrapper label{
     margin-bottom:6px;
+    font-size: 14px;
 }
 .btn-groups{
     gap:10px;
