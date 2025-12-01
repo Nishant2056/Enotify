@@ -599,6 +599,9 @@ display:block;
 .no-gap{
     gap:0 !important;
 }
+.modal-body p,.upload-file-title{
+    word-break: break-all;
+}
 @media(max-width:768px){
 .col-6{
     flex:0 0 100%;
