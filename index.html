@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eNotify</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="/css/smart.css">
+</head>
+<body>
+  <!-- header -->
+    <header class="site-header">
+        <div class="header-one bg-white site-header d-flex justify-content-between align-items-center">
+           <a href="/"><img src="images/logo.png" alt="" class="logo"></a>
+            <div class="d-flex align-items-center gap-4">
+                <div class="d-flex align-items-center gap-2">
+                    <img src="images/Avatar.png" alt="profile-picture" class="avatar w-32 h-32">
+                    <span class="username" style="color:#252627">John Kennedy</span>
+                </div>
+                
+
+                <button class="d-flex align-items-center justify-content-center gap-2 bg-white logout-btn">
+                    <img src="images/logout.svg" alt="logout-icon" class="logout-icon w-5 h-5">
+                    <span class="text-gray-700 font-medium"style="color:#5A5D60;">Log out</span>
+                </button>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light nav-menu-container">
+            <div class="container-fluid p-0">
+   
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu-items">
+                        
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            System
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            EMS Engine
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SMS Module
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Logs
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Menu Access List
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+
+                        <li class="nav-item dropdown role-access">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Role Access
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+
+    <!-- below header table and buttons here -->
+
+    <div class="user-search d-flex flex-column align-items-center justify-content-between">
+        <div class="form-list d-flex align-items-center justify-content-between">
+                          <div class="text-part d-flex align-items-center gap-2">
+                              <h2 class="m-0 fw-semibold">User List</h2>
+                              <p class="m-0" style="color:#3366D2">20 users</p>
+                          </div>
+                          <form class="d-flex align-items-center">
+                              <input type="text" class="form-control" placeholder="Search by User ID/User Name/Email">
+                              <button class="btn btn-primary btn-add-user"><i class="fas fa-plus me-2"><img src="/images/add.svg" alt=""></i>Add User</button>
+                              <button class="btn btn-outline-secondary btn-download"><i class="fas fa-download me-2"><img src="/images/download.svg" alt=""></i>Download</button>
+                          </form>
+                  </div>
+
+                  <div class="table-list">
+                      <table class="table">
+            
+            <thead>
+              <tr>
+                <th scope="col">user code</th>
+                <th scope="col">user name</th>
+                <th scope="col">department</th>
+                <th scope="col">Role</th>
+                <th scope="col">status</th>
+                <th scope="col">module</th>
+                <th scope="col">action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">58862</th>
+                <td>Savannah Nguyen</td>
+                <td>Product Designer</td>
+                <td>Regional Manager</td>
+                <td class="active-status"><span>Active</span></td>
+                <td>Both</td>
+                <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon" class="edit-icon"> <img src="/images/delete-icon.svg" alt="delete icon" class=delete-icon></span></td>
+              </tr>
+            <tr>
+                <th scope="row">24689</th>
+                <td>Albert Flores</td>
+                <td>Product Manager</td>
+                <td>Super admin</td>
+                <td class="inactive-status"><span>Inactive</span></td>
+                <td>Both</td>
+               <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon" class="edit-icon"> <img src="/images/delete-icon.svg" alt="delete icon" class="delete-icon"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">25065</th>
+                <td>Guy Hawkins</td>
+                <td>Frontend Developer</td>
+                <td>Normal user</td>
+                <td class="inactive-status"><span>Inactive</span></td>
+                <td>Both</td>
+               <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon"> <img src="/images/delete-icon.svg" alt="delete icon"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">87201</th>
+                <td>Wade Warren</td>
+                <td>Backend Developer</td>
+                <td>Regional Manager</td>
+                <td class="active-status"><span>Active</span></td>
+                <td>SMS Module</td>
+               <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon"> <img src="/images/delete-icon.svg" alt="delete icon"></span></td>
+              </tr>
+            
+                <th scope="row">48051</th>
+                <td>Jerome Bell</td>
+                <td>Fullstack Developer</td>
+                <td>Accountancy</td>
+                <td class="active-status"><span>Active</span></td>
+                <td>Both</td>
+               <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon"> <img src="/images/delete-icon.svg" alt="delete icon"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">35180</th>
+                <td>Brooklyn Simmons</td>
+                <td>UX Designer</td>
+                <td>Administrator</td>
+                <td class="inactive-status"><span>Inactive</span></td>
+                <td>Both</td>
+               <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon"> <img src="/images/delete-icon.svg" alt="delete icon"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">34451</th>
+                <td>Marvin McKinney</td>
+                <td>UX Copywriter</td>
+                <td>Regional Manager</td>
+                <td class="active-status"><span>Active</span></td>
+                <td>SMS Module</td>
+               <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon"> <img src="/images/delete-icon.svg" alt="delete icon"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">67080</th>
+                <td>Ronald Richards</td>
+                <td>UI Designer</td>
+                <td>Regional Manager</td>
+                <td class="active-status"><span>Active</span></td>
+                <td>Both</td>
+               <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon"> <img src="/images/delete-icon.svg" alt="delete icon"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">83000</th>
+                <td>Devon Lane</td>
+                <td>Product Manager</td>
+                <td>Accountant</td>
+                <td class="active-status"><span>Active</span></td>
+                <td>SMS Module</td>
+               <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon"> <img src="/images/delete-icon.svg" alt="delete icon"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">62365</th>
+                <td>Jane Cooper</td>
+                <td>QA Engineer</td>
+                <td>Normal user</td>
+                <td class="active-status"><span>Active</span></td>
+                <td>SMS Module</td>
+               <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon"> <img src="/images/delete-icon.svg" alt="delete icon"></span></td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+
+          <div class="pagination-wrapper d-flex align-items-center justify-content-between">
+                <button type="button" class="btn btn-secondary">Show All Data <img src="/images/chevron-down.svg" alt=""></button>
+
+                      <nav aria-label="...">
+                        <ul class="pagination m-0">
+                          <div class="previo"><li class="page-item"><a href="#" class="page-link"><img src="/images/arrow-left.svg" alt="arrow-left">Previous</a></li></div>
+                          <div class="pagination-page">
+                            <li class="page-item active">
+                            <a class="page-link" href="#" aria-current="page">1</a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">...</a></li>
+                          <li class="page-item"><a class="page-link" href="#">8</a></li>
+                          <li class="page-item"><a class="page-link" href="#">9</a></li>
+                          <li class="page-item"><a class="page-link" href="#">10</a></li>
+                          </div>
+                          
+                          <div class="next"><li class="page-item"><a class="page-link" href="#">Next <img src="/images/arrow-right.svg" alt="arrow-right"></a></li></div>
+                          
+                        </ul>
+                      </nav>
+            </div>
+    </div>
+<!-- code for the text box table -->
+     <!-- <div class="table-list">
+          <table class="table">
+            
+            <thead>
+              <tr>
+                <th scope="col">
+        <input type="checkbox" id="selectAll">
+      </th>
+                <th scope="col">user code</th>
+                <th scope="col">user name</th>
+                <th scope="col">department</th>
+                <th scope="col">Role</th>
+                <th scope="col">status</th>
+                <th scope="col">module</th>
+                <th scope="col">action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+        <input type="checkbox" class="row-checkbox">
+      </td>
+                <th scope="row">58862</th>
+                <td>Savannah Nguyen</td>
+                <td>Product Designer</td>
+                <td>Regional Manager</td>
+                <td class="active-status"><span>Active</span></td>
+                <td>Both</td>
+                <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon" class="edit-icon"> <img src="/images/delete-icon.svg" alt="delete icon" class=delete-icon></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+         -->
+
+  <footer class="site-footer d-flex align-items-center justify-content-center">© 2019 Himalayan Bank Ltd. All Rights Reserved.</footer>
+
+
+
+  <!-- popups and overlay -->
+  <div class="page-overlay">
+    <div class="logout-confirmation d-flex flex-column">
+      <div class="questions">
+        <h3 class="d-flex justify-content-between">Log out? <img src="/images/cross-icon.svg" alt="cross icon" class="cross-icon"></h3>
+        <p class="m-0">Are you sure you want to log out?</p>
+      </div>
+      <div class="buttons-wrapper d-flex">
+        <button type="button" class="btn btn-light">Cancel</button>
+        <button type="button" class="btn btn-danger">Yes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- for user delete part -->
+
+  <div class="page-overlay for-delete">
+    <div class="logout-confirmation delete-user-confirmation d-flex flex-column">
+      <div class="questions">
+        <h3 class="d-flex justify-content-between">Delete User? <img src="/images/cross-icon.svg" alt="cross icon" class="cross-icon delete-cross"></h3>
+        <p class="m-0">Are you sure you want to delete user with user code 58862?</p>
+      </div>
+      <div class="buttons-wrapper d-flex">
+        <button type="button" class="btn btn-light">Cancel</button>
+        <button type="button" class="btn btn-danger">Yes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- for adding user part -->
+  <div class="page-overlay add-user">
+    <div class="user-addition d-flex flex-column justify-content-between">
+      <div class="d-flex flex-column">
+        <h3 class="d-flex justify-content-between">Add New User <img src="/images/cross-icon.svg" alt="cross icon" class="cross-icon cross-icon-add"></h3>
+        <form>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">User Code</label>
+                <input type="text" id="disabledTextInput" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">User Name</label>
+                <input type="text" id="disabledTextInput" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Email</label>
+                <input type="text" id="disabledTextInput" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Department</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Technology</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Role</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Super Admin</option>
+                </select>
+              </div>
+              <div class="d-flex status-module">
+                <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Status</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Active</option>
+                </select>
+              </div>
+               <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Module</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Both</option>
+                </select>
+              </div>
+              </div>
+              
+              
+        </form>
+      </div>
+
+      <div class="adduser-btn-wrapper">
+        <div class="buttons-wrapper d-flex">
+        <button type="button" class="btn btn-light">Cancel</button>
+        <button type="button" class="btn btn-danger">Add New User</button>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+  <!-- for edit user part -->
+  <div class="page-overlay add-user edit-user">
+    <div class="user-addition d-flex flex-column justify-content-between">
+      <div class="d-flex flex-column">
+        <h3 class="d-flex justify-content-between">Edit User Details <img src="/images/cross-icon.svg" alt="cross icon" class="cross-icon cross-icon-edit"></h3>
+        <form>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">User Code</label>
+                <input type="text" id="disabledTextInput" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">User Name</label>
+                <input type="text" id="disabledTextInput" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Email</label>
+                <input type="text" id="disabledTextInput" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Department</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Technology</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Role</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Super Admin</option>
+                </select>
+              </div>
+              <div class="d-flex status-module">
+                <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Status</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Active</option>
+                </select>
+              </div>
+               <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Module</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Both</option>
+                  <option>SMS Module</option>
+                </select>
+              </div>
+              </div>
+              
+              
+        </form>
+      </div>
+
+      <div class="adduser-btn-wrapper">
+        <div class="buttons-wrapper d-flex">
+        <button type="button" class="btn btn-light">Cancel</button>
+        <button type="button" class="btn btn-danger">Save</button>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/smart.js"></script>
+</body>
+</html>
