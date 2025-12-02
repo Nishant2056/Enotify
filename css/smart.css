@@ -118,6 +118,7 @@ h2{
 .nav-menu-container .menu-items .nav-item .dropdown-menu.show{
     width:240px;
     margin-top: 8px;
+    box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.1);
 }
 .nav-menu-container .menu-items li a::after{
     display: none;
