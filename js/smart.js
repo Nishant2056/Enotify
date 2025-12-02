@@ -75,7 +75,7 @@ if(editIcons){
         });
     }
 
-        const crossBtn= document.querySelector('.cross-btn');
+        const crossBtn= document.querySelectorAll('.cross-btn');
         const uploadModal = document.querySelector('#upload-file-modal');
         const yesBtn = document.querySelectorAll('.yes-btn');
         const cancelBtn = document.querySelector('.cancel-btn');
@@ -87,11 +87,15 @@ if(editIcons){
         const uploadInput =document.querySelector('.custom-file-label')
         const modalBody = document.querySelector('.modal-body p');
         const uploadBtn = document.querySelector('.upload-btn');
-        const btnGroups = document.querySelector('.btn-groups')
+        const btnGroups = document.querySelector('.btn-groups');
+        const SendBtn =document.querySelector('.send-btn');
+        const notifyModal =document.querySelector('#notify-modal');
         const MAX_FILE_SIZE_BYTES = 50 * 1024 * 1024 ; // 50 mb in bytes
 if(crossBtn){
-        crossBtn.addEventListener("click",function(){
+        crossBtn.forEach((cb)=>{cb.addEventListener("click",function(){
             uploadModal.classList.remove('active');
+            notifyModal.classList.remove('active');
+        });
         });
     }
         function uploadDesc(){
@@ -155,6 +159,9 @@ if(crossBtn){
                     uploadError()
                     fileInput.value = ''; 
                     uploadDesc();
+        });
+        SendBtn.addEventListener('click',function(){
+           notifyModal.classList.add('active');
         });
         });
 

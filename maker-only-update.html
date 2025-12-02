@@ -169,7 +169,7 @@
         </div>
         <div class="maker-table-wrapper">
             <div class="top-btn d-flex">
-                <button type="button" class="d-flex align-items-center btn-primary gap-2">
+                <button type="button" class="d-flex align-items-center btn-primary gap-2 send-btn">
                     <span>Send</span>
                     <img src="images/send-icon.svg" alt="Download Icon Img" width="16" height="16">               
                 </button>
@@ -324,6 +324,24 @@
       </div>
       <div class="modal-body">
             <p></p>
+      </div>
+      <div class="modal-footer d-flex justify-content-between align-items-center">
+        <button type="button" class="btn-secondary cancel-btn" >Cancel</button>
+        <button type="button" class="btn-primary yes-btn">Yes</button>
+      </div>
+    </div>
+  </div>
+  <!-- notification modal -->
+  <div id="notify-modal"  >
+  <div class="modal-wrapper ">
+      <div class="modal-header d-flex justify-content-between align-items-center">
+        <h3 class="modal-title">Send notification?</h3>
+        <button type="button" class="no-bg cross-btn" class="close" >
+          <img src="images/cross-icon.svg" width="10" height="10" alt="Cross Icon" />
+        </button>
+      </div>
+      <div class="modal-body">
+            <p>Are you sure you want to notify your users?</p>
       </div>
       <div class="modal-footer d-flex justify-content-between align-items-center">
         <button type="button" class="btn-secondary cancel-btn" >Cancel</button>
