@@ -230,15 +230,9 @@ h2{
 }
 
 .table-list .table .active-status span::before{
-    content:"";
+    content: url(/images/green-dot.svg);
     position: absolute;
-    background: #096F0D;
-    width: 6px;
-    height: 6px;
-    border-radius:50%;
     left: 7px;
-    top: 8px;
-
 }
 .table-list .table .inactive-status span{
     background: rgba(189, 0, 0, 0.09);
@@ -248,14 +242,10 @@ h2{
     position: relative;
 }
 .table-list .table .inactive-status span::before{
-    content:"";
+    content:url(/images/red-dot.svg);
     position: absolute;
-    background: #BD0000;
-    width: 6px;
-    height: 6px;
-    border-radius:50%;
     left: 7px;
-    top: 8px;
+  
 
 }
 .table-list .table tbody .edit-delete span{
@@ -334,6 +324,7 @@ h2{
     color: #0165B3;
     font-size: 12px;
     margin-top: 132px;
+    font-weight: 400;
 }
 .page-overlay{
     position: fixed;
