@@ -8,12 +8,12 @@
   font-weight: 400; 
   font-style: normal;
 }
-/* @font-face {
+@font-face {
   font-family: 'inter';
   src: url('/fonts/Inter-Medium.woff') format('woff');
   font-weight: 500; 
   font-style: normal;
-} */
+}
 *{
     padding:0;
     margin:0;
@@ -106,6 +106,7 @@ h2{
 }
 .nav-menu-container .menu-items li a{
     color: #F7F7F8;
+    font-weight: 400;
 }
 .nav-menu-container .menu-items li .nav-link.show{
     color:#F7F7F8;
@@ -596,7 +597,7 @@ display:block;
     margin-top:32px;
 }
 .maker-wrapper .lists span{
-    font-weight:600;
+    font-weight:500;
 }
 .maker-top-wrapper label{
     pointer-events: none;
