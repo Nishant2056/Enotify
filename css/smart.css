@@ -523,7 +523,7 @@ height: 0;
 .upload-btn{
     margin-top:24px;
 }
-#upload-file-modal{
+#upload-file-modal,#notify-modal{
     background-color: #26262640;
     width:100%;
     height: 100%;
@@ -535,7 +535,7 @@ height: 0;
     visibility: none;
     transition: all 0.3s ease-in-out;
 }
-#upload-file-modal.active{
+#upload-file-modal.active,#notify-modal.active{
     display: grid;
     visibility: visible;
     opacity: 1;
