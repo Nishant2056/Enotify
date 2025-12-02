@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maker Only Upload</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/smart.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-one bg-white site-header d-flex justify-content-between align-items-center">
+           <a href="/"><img src="images/logo.png" alt="" class="logo"></a>
+            <div class="d-flex align-items-center gap-4">
+                <div class="d-flex align-items-center gap-2">
+                    <img src="images/Avatar.png" alt="profile-picture" class="avatar w-32 h-32">
+                    <span class="username" style="color:#252627">John Kennedy</span>
+                </div>
+                
+
+                <button class="d-flex align-items-center justify-content-center gap-2 bg-white logout-btn">
+                    <img src="images/logout.svg" alt="logout-icon" class="logout-icon w-5 h-5">
+                    <span className="text-gray-700 font-medium"style="color:#5A5D60;">Log out</span>
+                </button>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light nav-menu-container">
+            <div class="container-fluid">
+   
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu-items">
+                        
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            System
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            EMS Engine
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SMS Module
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Logs
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Menu Access List
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+
+                        <li class="nav-item dropdown role-access">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Role Access
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+    <div class="maker-wrapper">
+      <div class="container">
+        <h2>Maker Only</h2>
+        <div class="maker-main border pad-12">
+          <div class="d-flex maker-top-wrapper">
+                <div class="col-6 d-flex flex-column justify-content-between bg-light-blue border pad-12">
+                  <div class="col-top">
+                  <h3 class="list-title">
+                    Hint:
+                  </h3>
+                  <ul class="lists">
+                      <li>You need to create an excel with following columns: <span>BODY, SCHEDULE_ON, CONTACT_NO</span></li>
+                      <li>Data on columns <span>BODY, SCHEDULE_ON</span> and <span>SMS</span> are mandatory.</li>
+                      <li><span>SCHEDULE_ON</span> is a date field and its value must be greater or equal to today. <span>(YYYY-MM-DD)</span></li>
+                      <li><span>CONTACT_NO</span> is an Mobile Number field and valid number are required.</li>
+                  </ul>
+                  </div>
+                  <div class="downlaod-wrapper">
+                  <button type="button" class="d-flex align-items-center no-bg gap-2">
+                      <img src="images/download-icon.svg" alt="Download Icon Img" width="12" height="12"/>
+                      <span>Download Excel Template</span>
+                  </button>
+                </div>
+                </div>
+
+                <div class="col-6 d-flex justify-content-center align-items-center border pad-12">
+                  <div class="inner-div d-flex flex-column align-items-center ">
+                    <input type="file" class="custom-file-input" id="inputfile" accept=".xls, .xlsx">
+                    <label class="custom-file-label d-flex flex-column align-items-center" for="inputfile">
+                    <img src="images/upload-cloud.svg" width="32" height="32" alt="Upload Cloud" />
+                    <p class="upload-file-title">Upload file</p>
+                    <p class="upload-file-space m-0">Upload Excel file upto 50 MB.</p>
+                    </label>
+                    <div id="errorMessage" class="error-message"></div>
+                    <button class="upload-btn" type="button" >
+                     Browse File                   
+                     </button>
+                  </div>
+                </div>
+          </div>
+          <div class="maker-bottom-wrapper">
+            <form action="" class="remark">
+                <div class="form-group">
+                    <label for="remarks">Remarks</label>
+                    <textarea class="form-control border" id="remarks" rows="3" placeholder="Enter your remarks here..."></textarea>
+                </div>
+            </form>
+            <div class="btn-groups
+                align-items-center ">
+                <button class="btn-secondary">Cancel</button>
+                <button class="btn-primary yes-btn">Upload</button>
+            </div>
+        </div>
+        </div>
+        <div class="maker-table-wrapper">
+            <div class="top-btn d-flex">
+                <button type="button" class="d-flex align-items-center btn-primary gap-2">
+                    <span>Send</span>
+                    <img src="images/send-icon.svg" alt="Download Icon Img" width="16" height="16">               
+                </button>
+            </div>
+            <div class="table-list">
+                 <table class="table">          
+                    <thead>
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Title</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">58862</th>
+                        <td>Savannah Nguyen</td>
+                        <td>Product Designer</td>
+                        <td>Regional Manager</td>
+                        <td>Both</td>
+                        <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon" class="edit-icon"> <img src="/images/delete-icon.svg" alt="delete icon" class="delete-icon"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">24689</th>
+                        <td>Albert Flores</td>
+                        <td>Product Manager</td>
+                        <td>Super admin</td>
+                        <td>Both</td>
+                    <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon" class="edit-icon"> <img src="/images/delete-icon.svg" alt="delete icon" class="delete-icon"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">25065</th>
+                        <td>Guy Hawkins</td>
+                        <td>Frontend Developer</td>
+                        <td>Normal user</td>
+                        <td>Both</td>
+                    <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon" class="edit-icon"> <img src="/images/delete-icon.svg" alt="delete icon" class="delete-icon"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">87201</th>
+                        <td>Wade Warren</td>
+                        <td>Backend Developer</td>
+                        <td>Regional Manager</td>
+                        <td>SMS Module</td>
+                    <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon" class="edit-icon"> <img src="/images/delete-icon.svg" alt="delete icon" class="delete-icon"></span></td>
+                    </tr>
+                    
+                        <tr><th scope="row">48051</th>
+                        <td>Jerome Bell</td>
+                        <td>Fullstack Developer</td>
+                        <td>Accountancy</td>
+                        <td>Both</td>
+                    <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon" class="edit-icon"> <img src="/images/delete-icon.svg" alt="delete icon" class="delete-icon"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">35180</th>
+                        <td>Brooklyn Simmons</td>
+                        <td>UX Designer</td>
+                        <td>Administrator</td>
+                        <td>Both</td>
+                    <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon" class="edit-icon"> <img src="/images/delete-icon.svg" alt="delete icon" class="delete-icon"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">34451</th>
+                        <td>Marvin McKinney</td>
+                        <td>UX Copywriter</td>
+                        <td>Regional Manager</td>
+                        <td>SMS Module</td>
+                    <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon" class="edit-icon"> <img src="/images/delete-icon.svg" alt="delete icon" class="delete-icon"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">67080</th>
+                        <td>Ronald Richards</td>
+                        <td>UI Designer</td>
+                        <td>Regional Manager</td>
+                        <td>Both</td>
+                    <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon" class="edit-icon"> <img src="/images/delete-icon.svg" alt="delete icon" class="delete-icon"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">83000</th>
+                        <td>Devon Lane</td>
+                        <td>Product Manager</td>
+                        <td>Accountant</td>
+                        <td>SMS Module</td>
+                    <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon" class="edit-icon"> <img src="/images/delete-icon.svg" alt="delete icon" class="delete-icon"></span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">62365</th>
+                        <td>Jane Cooper</td>
+                        <td>QA Engineer</td>
+                        <td>Normal user</td>
+                        <td>SMS Module</td>
+                    <td class="edit-delete"><span><img src="/images/edit-icon.svg" alt="edit icon" class="edit-icon"> <img src="/images/delete-icon.svg" alt="delete icon" class="delete-icon"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+          <div class="pagination-wrapper d-flex align-items-center justify-content-between">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     
+                      Show All Data
+                       <img src="/images/chevron-down.svg" alt="">
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+
+                      <nav aria-label="...">
+                        <ul class="pagination m-0">
+                          <div class="previo"><li class="page-item"><a href="#" class="page-link"><img src="/images/arrow-left.svg" alt="arrow-left">Previous</a></li></div>
+                          <div class="pagination-page">
+                            <li class="page-item active">
+                            <a class="page-link" href="#" aria-current="page">1</a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">...</a></li>
+                          <li class="page-item"><a class="page-link" href="#">8</a></li>
+                          <li class="page-item"><a class="page-link" href="#">9</a></li>
+                          <li class="page-item"><a class="page-link" href="#">10</a></li>
+                          </div>
+                          
+                          <div class="next"><li class="page-item"><a class="page-link" href="#">Next <img src="/images/arrow-right.svg" alt="arrow-right"></a></li></div>
+                          
+                        </ul>
+                      </nav>
+            </div>
+    </div>
+
+      </div>
+    </div>
+
+  <footer class="site-footer d-flex align-items-center justify-content-center">© 2019 Himalayan Bank Ltd. All Rights Reserved.</footer>
+
+
+<!-- Modal -->
+<div id="upload-file-modal" >
+  <div class="modal-wrapper ">
+      <div class="modal-header d-flex justify-content-between align-items-center">
+        <h3 class="modal-title">Upload file?</h3>
+        <button type="button" class="no-bg cross-btn" class="close" >
+          <img src="images/cross-icon.svg" width="10" height="10" alt="Cross Icon" />
+        </button>
+      </div>
+      <div class="modal-body">
+            <p></p>
+      </div>
+      <div class="modal-footer d-flex justify-content-between align-items-center">
+        <button type="button" class="btn-secondary cancel-btn" >Cancel</button>
+        <button type="button" class="btn-primary yes-btn">Yes</button>
+      </div>
+    </div>
+  </div>
+  <!-- popups and overlay -->
+  <div class="page-overlay">
+    <div class="logout-confirmation d-flex flex-column">
+      <div class="questions">
+        <h3 class="d-flex justify-content-between">Log out? <img src="/images/cross-icon.svg" alt="cross icon" class="cross-icon"></h3>
+        <p class="m-0">Are you sure you want to log out?</p>
+      </div>
+      <div class="buttons-wrapper d-flex">
+        <button type="button" class="btn btn-light">Cancel</button>
+        <button type="button" class="btn btn-danger">Yes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- for user delete part -->
+
+  <div class="page-overlay for-delete">
+    <div class="logout-confirmation delete-user-confirmation d-flex flex-column">
+      <div class="questions">
+        <h3 class="d-flex justify-content-between">Delete User? <img src="/images/cross-icon.svg" alt="cross icon" class="cross-icon delete-cross"></h3>
+        <p class="m-0">Are you sure you want to delete user with user code 58862?</p>
+      </div>
+      <div class="buttons-wrapper d-flex">
+        <button type="button" class="btn btn-light">Cancel</button>
+        <button type="button" class="btn btn-danger">Yes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- for adding user part -->
+  <div class="page-overlay add-user">
+    <div class="user-addition d-flex flex-column justify-content-between">
+      <div class="d-flex flex-column">
+        <h3 class="d-flex justify-content-between">Add New User <img src="/images/cross-icon.svg" alt="cross icon" class="cross-icon cross-icon-add"></h3>
+        <form>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">User Code</label>
+                <input type="text" id="disabledTextInput" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">User Name</label>
+                <input type="text" id="disabledTextInput" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Email</label>
+                <input type="text" id="disabledTextInput" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Department</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Technology</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Role</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Super Admin</option>
+                </select>
+              </div>
+              <div class="d-flex status-module">
+                <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Status</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Active</option>
+                </select>
+              </div>
+               <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Module</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Both</option>
+                </select>
+              </div>
+              </div>
+              
+              
+        </form>
+      </div>
+
+      <div class="adduser-btn-wrapper">
+        <div class="buttons-wrapper d-flex">
+        <button type="button" class="btn btn-light">Cancel</button>
+        <button type="button" class="btn btn-danger">Add New User</button>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+  <!-- for edit user part -->
+  <div class="page-overlay add-user edit-user">
+    <div class="user-addition d-flex flex-column justify-content-between">
+      <div class="d-flex flex-column">
+        <h3 class="d-flex justify-content-between">Edit User Details <img src="/images/cross-icon.svg" alt="cross icon" class="cross-icon cross-icon-edit"></h3>
+        <form>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">User Code</label>
+                <input type="text" id="disabledTextInput" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">User Name</label>
+                <input type="text" id="disabledTextInput" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="disabledTextInput" class="form-label">Email</label>
+                <input type="text" id="disabledTextInput" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Department</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Technology</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Role</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Super Admin</option>
+                </select>
+              </div>
+              <div class="d-flex status-module">
+                <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Status</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Active</option>
+                </select>
+              </div>
+               <div class="mb-3">
+                <label for="disabledSelect" class="form-label">Module</label>
+                <select id="disabledSelect" class="form-select">
+                  <option>Both</option>
+                  <option>SMS Module</option>
+                </select>
+              </div>
+              </div>
+              
+              
+        </form>
+      </div>
+
+      <div class="adduser-btn-wrapper">
+        <div class="buttons-wrapper d-flex">
+        <button type="button" class="btn btn-light">Cancel</button>
+        <button type="button" class="btn btn-danger">Save</button>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/smart.js"></script>
+</body>
+</html>
