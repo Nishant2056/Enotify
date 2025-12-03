@@ -132,6 +132,7 @@ h2{
     right: -6px;
     font-size: 14px;
     width: 0;
+    font-weight: 400;
 }
 .role-access:after{
     display: none;
