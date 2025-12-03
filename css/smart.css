@@ -600,6 +600,10 @@ display:block;
 .modal-body p,.upload-file-title{
     word-break: break-all;
 }
+.col-6{
+    flex:0 0 calc(50% - 6px);
+    width: calc(50% - 6px);
+}
 @media(max-width:768px){
 .col-6{
     flex:0 0 100%;
