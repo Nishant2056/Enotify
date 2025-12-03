@@ -55,6 +55,12 @@ label{
 :is(input,textarea)::placeholder{
     font-weight: 400;
 }
+.form-control:focus,
+.form-select:focus,
+textarea:focus {
+    box-shadow: none;
+    border-color: #E6E7E8;
+}
 .btn-primary{
     background-color:var(--primary-color); 
     color:#fff ;
