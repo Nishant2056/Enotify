@@ -109,6 +109,8 @@ h2{
 }
 .nav-menu-container .menu-items li .nav-link.show{
     color:#F7F7F8;
+    background: #054F87;
+    border-radius: 4px;
 }
 .nav-menu-container .menu-items li .show li a{
     color:#000;
@@ -603,6 +605,10 @@ display:block;
 }
 .modal-body p,.upload-file-title{
     word-break: break-all;
+}
+.col-6{
+    flex:0 0 calc(50% - 6px);
+    width: calc(50% - 6px);
 }
 @media(max-width:768px){
 .col-6{
