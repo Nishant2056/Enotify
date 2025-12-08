@@ -101,36 +101,77 @@ h2{
 .logout-btn:focus{
     border: 1px solid #E6E7E8;
 }
-.site-header .nav-menu-container{
-    padding:8px 24px;
+.nav-menu-container{
+    padding:2px 0;
     font-size:16px;
     background: #0165B3 !important;
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    display: flex;
+    align-items: start;
 }
 .nav-menu-container .menu-items{
     display: flex;
     gap: 16px;
+    flex-direction: column;
 }
 .nav-menu-container .menu-items li a{
     color: #F7F7F8;
     font-weight: 400;
+    position: relative;
 }
 .nav-menu-container .menu-items li .nav-link.show{
     color:#F7F7F8;
     background: #054F87;
-    border-radius: 4px;
+
+}
+.nav-menu-container .menu-items li .nav-link:hover{
+    background: #054F87;
 }
 .nav-menu-container .menu-items li .show li a{
     color:#000;
 }
+.nav-menu-container .menu-items .nav-item .dropdown-menu{
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
 .nav-menu-container .menu-items .nav-item .dropdown-menu.show{
-    width:240px;
-    margin-top: 8px;
+    margin: 0;
     box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-radius: 0;
+    transition: all 0.3s ease-in-out;
+    visibility: visible;
+    opacity: 1;
+}
+.nav-menu-container .menu-items .nav-item.dropdown{
+    min-width: 250px;
+    width: 100%;
 }
 .nav-menu-container .menu-items li a::after{
     display: none;
 }
-.nav-menu-container .menu-items .dropdown::after{
+.nav-menu-container .menu-items .nav-item .nav-link::before{
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    right: 14px;
+    top: 36%;
+    height: 6px;
+    width: 6px;
+    transition: all 0.3s ease;
+}
+.nav-menu-container .menu-items .nav-item .dropdown-toggle.show::before{
+    transform: rotate(227deg);
+    top: 50%;
+}
+/* .nav-menu-container .menu-items .dropdown::after{
     content: "|";
     position: absolute;
     color: #0A95ED;
@@ -139,7 +180,7 @@ h2{
     font-size: 14px;
     width: 0;
     font-weight: 400;
-}
+} */
 .role-access:after{
     display: none;
 }
@@ -147,7 +188,9 @@ h2{
    width: 100%;
 }
 .user-search{
-    padding: 36px 24px 12px;
+    padding: 90px 24px 12px;
+        width: calc(100% - 250px);
+    margin-left: auto;
 }
 .user-search .text-part h2{
     font-size: 22px;
@@ -193,7 +236,14 @@ h2{
     max-width: 117px;
     width: 100%;
 }
-.site-header .nav-menu-container .dropdown-divider{
+
+.main-header{
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    box-shadow: 0 2px 15px rgb(0, 0, 0, 0.1);
+}
+.main-header .nav-menu-container .dropdown-divider{
     display: none;
 }
 .user-search form .btn-download img{
@@ -255,10 +305,13 @@ h2{
   
 
 }
+.table-list .table .edit-delete{
+    padding: 16px 20px;
+}
 .table-list .table tbody .edit-delete span{
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 85%;
 }
 .table-list .table tbody .edit-delete span img{
     cursor: pointer;
@@ -287,7 +340,7 @@ h2{
     gap: 2px;
 }
 .pagination-wrapper nav {
-    width: 44%;
+    width: auto;
 }
 .pagination-wrapper nav .pagination.m-0 .previo a,
 .pagination-wrapper nav .pagination.m-0 .pagination-page li a,
@@ -299,7 +352,7 @@ h2{
 }
 .pagination-wrapper nav .pagination.m-0{
     display: flex;
-    justify-content: space-between;
+    gap : 2px;
 }
 .pagination-wrapper nav .pagination.m-0 .previo li a,
 .pagination-wrapper nav .pagination.m-0 .next li a{
@@ -332,6 +385,9 @@ h2{
     font-size: 12px;
     margin-top: 132px;
     font-weight: 400;
+    z-index: 9;
+    width: calc(100% - 250px);
+    margin-left: auto;
 }
 .page-overlay{
     position: fixed;
@@ -341,7 +397,7 @@ h2{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.25);
     display: none;
-    z-index: 99; 
+    z-index: 999; 
     
 }
 .page-overlay .logout-confirmation{
@@ -433,12 +489,15 @@ h2{
 }
 
 @media(max-width:1200px){
-    .pagination-wrapper nav{
-        width: auto;
-    }
+
     .table-list .table tbody .edit-delete span{
         width: auto;
     }
+}
+@media (min-width:1200px){
+    /* .user-search{
+        width: 100%;
+    } */
 }
 /* maker only css */
 
@@ -490,7 +549,9 @@ button.upload-btn{
 
 }
 .maker-wrapper{
-    padding-block:36px;
+    padding-block:90px;
+    width: calc(100% - 250px);
+    margin-left: auto;
 }
 .maker-wrapper h2{
     margin-bottom:12px;
@@ -541,6 +602,7 @@ height: 0;
     display: grid;
     visibility: visible;
     opacity: 1;
+    z-index: 999;
 }
 .modal-wrapper{
     max-width: 340px;
