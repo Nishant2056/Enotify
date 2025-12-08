@@ -132,12 +132,21 @@ h2{
 .nav-menu-container .menu-items li .show li a{
     color:#000;
 }
+.nav-menu-container .menu-items .nav-item .dropdown-menu{
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
 .nav-menu-container .menu-items .nav-item .dropdown-menu.show{
     margin: 0;
     box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.1);
     position: relative;
     border-radius: 0;
     transition: all 0.3s ease-in-out;
+    visibility: visible;
+    opacity: 1;
 }
 .nav-menu-container .menu-items .nav-item.dropdown{
     min-width: 250px;
@@ -146,7 +155,7 @@ h2{
 .nav-menu-container .menu-items li a::after{
     display: none;
 }
-.nav-menu-container .menu-items li a::before{
+.nav-menu-container .menu-items .nav-item .nav-link::before{
     content: "";
     position: absolute;
     border-bottom: 2px solid #fff;
